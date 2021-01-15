@@ -1,0 +1,27 @@
+<div class="match-comment-block">
+  <div class="match-comment">
+    <div *ngFor="let matchComment of matchComments">
+      <div class="row none-margin-right">
+        <div class="col-lg-1 col-sm-1 col-md-1 avatar">
+          <i class="fa fa-user-circle" aria-hidden="true"></i>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 name">
+          <span>({{matchComment.user.name}}): </span>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-9 comment-content">
+          <span class="comment">{{matchComment.comment}}</span>.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row match-comment-input">
+    <div class="col-lg-12">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Nhập bình luận...">
+        <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button">Đăng</button>
+      </span>
+      </div>
+    </div>
+  </div>
+</div>

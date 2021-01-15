@@ -1,0 +1,65 @@
+<div class="match-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row row-match">
+          <div class="col-lg-3 col-match">
+            <app-team [team]="match.host"></app-team>
+          </div>
+          <div class="col-lg-2 col-center">
+            <img *ngIf="match.isProgressing" src="../../assets/images/icon-hot.png" class="icon-hot">
+            <div class="match-info">
+              <div class="leage">{{match.leagueName}}</div>
+              <div class="team">{{match.host.teamAcronym}} - {{match.guest.teamAcronym}}</div>
+              <div class="col-lg-12 content-match">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <i class="fa fa-calendar-times-o" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-lg-9">
+                    <span class="day">{{match.dateStart}}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 content-match">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <i class="fa fa-hourglass-half" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-lg-9">
+                    <span class="hour">{{match.timeStart}}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 content-match">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <i class="fa fa-braille" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-lg-9">
+                    <span class="hour">{{match.stadium}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button *ngIf="match.isProgressing" type="button" class="btn btn-danger btn-custom">
+              <img src="../../assets/images/ball.png" class="ball ball-left">
+              Xem trận đấu ngay
+            </button>
+            <button *ngIf="!match.isProgressing" type="button" class="btn btn-primary">
+              <i class="fa fa-refresh fa-spin"></i>
+              Đang chờ diễn ra
+            </button>
+          </div>
+          <div class="col-lg-3 col-match">
+            <app-team [team]="match.guest"></app-team>
+          </div>
+          <div class="col-lg-4 col-infor">
+            <app-match-comment [matchComments]="match.matchComments"></app-match-comment>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

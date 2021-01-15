@@ -1,0 +1,63 @@
+.match-comment {
+  padding: 5px 5px;
+  min-height: 170px;
+  max-height: 170px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.match-comment .comment-content, .name {
+  font-size: 14px;
+}
+
+.match-comment .avatar {
+  padding-right: 0px;
+  padding-left: 10px;
+}
+
+.match-comment .name {
+  padding-right: 0px;
+  padding-left: 0px;
+  font-size: 12px;
+  padding-top: 4px;
+}
+
+.match-comment .comment-content {
+  background-color: rgb(42, 191, 206);
+  color: #653c0b;
+  line-height: 15px;
+  padding: 4px;
+  font-size: 12px;
+  border: solid 1px black;
+  border-radius: 8px;
+}
+
+.match-comment-input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 5px;
+  .input-group input {
+    height: 25px;
+  }
+}
+
+.none-margin-right {
+  margin-right: 0px !important;
+  margin-top: 2px;
+}
+
+.match-comment-input .input-group, .btn {
+  height: 25px;
+  font-size: 13px;
+  padding: 0 0.75rem;
+  cursor: pointer;
+}
+
+.match-comment-input .input-group input {
+  font-size: 13px;
+}
+
+.match-comment-block {
+  height: 200px;
+}

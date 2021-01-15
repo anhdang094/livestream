@@ -1,0 +1,47 @@
+.video {
+  position: fixed;
+  top: 50%; left: 50%;
+  z-index: -1000;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
+.container.background {
+  z-index: -500;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.match-event {
+  opacity: 1;
+}
+
+.match-event .text-center {
+  color: #09f130;
+  background-color: #595a0b;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.ball {
+  width: 50px;
+  -webkit-animation:spin 2s linear infinite;
+  -moz-animation:spin 2s linear infinite;
+  animation:spin 2s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.ball-left {
+  margin-right: 10px;
+}
+
+.ball-right {
+  margin-left: 10px;
+}
